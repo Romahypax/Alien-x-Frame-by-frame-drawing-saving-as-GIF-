@@ -9,4 +9,4 @@ A simple HTML application for creating gif (frame by frame? draw animations).
 <img src="screen_for_readme.png" width="800">
 </p>
 
-F
+:3
