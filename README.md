@@ -6,7 +6,7 @@ A simple HTML application for creating gif (frame by frame? draw animations).
 ## Preview
 
 <p align="center">
-<img src="screenshot_readme.png" width="800">
+<img src="screen_for_readme.png" width="800">
 </p>
 
 F
