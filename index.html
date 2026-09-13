@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#475765" />
+    <meta name="description" content="Alien X — покадровая рисовалка. Рисуйте, добавляйте кадры, смотрите анимацию и сохраняйте GIF прямо в браузере." />
+    <link rel="icon" type="image/svg+xml" href="./assets/logo-drSIo9Pw.svg" />
+    <title>Alien X — покадровая рисовалка</title>
+    <script type="module" crossorigin src="./assets/index-h-aoTK5M.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BPZ5XTMT.css">
+  </head>
+  <body>
+    <main id="app" class="app" aria-label="Покадровая рисовалка Alien X" tabindex="-1">
+      <header class="header" aria-label="Настройки рисунка">
+        <a class="logo" href="https://github.com/Romahypax" target="_blank" rel="noopener noreferrer" aria-label="Romahypax на GitHub" title="Romahypax на GitHub">
+          <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2096%2088'%3e%3cdefs%3e%3cclipPath%20id='alien'%3e%3cpath%20d='M51%2063C55%2060%2054%2055%2051%2051C42%2039%2048%2023%2059%2018C67%2013%2077%2017%2080%2024C83%2035%2075%2049%2069%2055C65%2060%2066%2066%2072%2070L88%2081L9%2083L40%2070Z'/%3e%3c/clipPath%3e%3c/defs%3e%3cpath%20d='M11%2019L23%2027L34%2018L42%2026L33%2037L40%2046L31%2054L22%2045L12%2054L4%2045L13%2036L4%2028Z'%20fill='%2383494c'%20stroke='%23708349'%20stroke-width='2.5'%20stroke-linejoin='round'/%3e%3cpath%20d='M71%2018L81%205'%20fill='none'%20stroke='%2396b062'%20stroke-width='3.5'%20stroke-linecap='round'/%3e%3ccircle%20cx='82'%20cy='5'%20r='3'%20fill='%23d39348'%20stroke='%2383494c'%20stroke-width='1.5'/%3e%3cpath%20d='M51%2063C55%2060%2054%2055%2051%2051C42%2039%2048%2023%2059%2018C67%2013%2077%2017%2080%2024C83%2035%2075%2049%2069%2055C65%2060%2066%2066%2072%2070L88%2081L9%2083L40%2070Z'%20fill='%2396b062'%20stroke='%2383494c'%20stroke-width='2'%20stroke-linejoin='round'/%3e%3cpath%20d='M79%2016C83%2040%2060%2062%2056%2067L67%2081L88%2085L100%2037Z'%20fill='%23708349'%20clip-path='url(%23alien)'/%3e%3cg%20fill='%23acc971'%3e%3cellipse%20cx='59'%20cy='30'%20rx='5'%20ry='6'%20transform='rotate(24%2059%2030)'/%3e%3cellipse%20cx='72'%20cy='31'%20rx='4.5'%20ry='5.5'%20transform='rotate(24%2072%2031)'/%3e%3cellipse%20cx='62'%20cy='43'%20rx='5'%20ry='5.5'%20transform='rotate(24%2062%2043)'/%3e%3c/g%3e%3cpath%20d='M57%2053L61%2053'%20fill='none'%20stroke='%23708349'%20stroke-width='2'%20stroke-linecap='round'/%3e%3c/svg%3e" width="96" height="88" alt="Alien X" />
+        </a>
+        <label class="color-control background-control" title="Цвет фона всей анимации">
+          <input id="background-color" type="color" value="#ffffff" aria-label="Цвет фона" />
+        </label>
+        <label class="color-control brush-control" title="Цвет кисти">
+          <input id="brush-color" type="color" value="#000000" aria-label="Цвет кисти" />
+        </label>
+        <label class="fps-control" title="Частота кадров · 1–60 · можно менять колёсиком">
+          <input id="fps" type="number" min="1" max="60" step="1" value="12" inputmode="numeric" aria-label="Частота кадров" />
+          <span>FPS</span>
+        </label>
+        <div class="size-control" title="Диаметр кисти · 1–100 пикселей">
+          <input id="brush-size" type="range" min="1" max="100" step="1" value="50" aria-label="Размер кисти" />
+          <label class="size-value">
+            <input id="brush-size-number" type="number" min="1" max="100" step="1" value="50" inputmode="numeric" aria-label="Размер кисти числом" />
+            <span>px</span>
+          </label>
+        </div>
+      </header>
+      <div class="workspace">
+        <aside class="toolbar" aria-label="Инструменты анимации">
+          <button id="export-gif" class="tool gif-button" aria-label="Экспорт GIF" title="Сохранить анимацию в GIF">
+            <svg viewBox="0 0 76 106" aria-hidden="true"><path d="M55 15C37 12 19 16 21 31C23 43 52 46 53 32L36 31 M25 54H51 M23 71H55 M23 72V94 M24 83H48"/></svg><span>GIF</span>
+          </button>
+          <button id="play" class="tool shape-button play-button" aria-label="Воспроизвести анимацию" aria-pressed="false" title="Воспроизвести анимацию">
+            <svg viewBox="0 0 76 68" aria-hidden="true"><path class="play-shape" d="M18 7 Q12 4 12 13 V55 Q12 64 20 60 L64 39 Q73 34 64 29Z"/><rect class="stop-shape" x="14" y="10" width="48" height="48" rx="10"/></svg>
+          </button>
+          <button id="undo" class="tool dark-button" aria-label="Отменить" title="Отменить · Ctrl+Z" disabled><svg viewBox="0 0 64 56" aria-hidden="true"><path d="M22 10 12 20 25 22 M15 20C64 17 64 48 15 41"/></svg></button>
+          <button id="redo" class="tool dark-button" aria-label="Повторить" title="Повторить · Ctrl+U" disabled><svg viewBox="0 0 64 56" aria-hidden="true"><path d="M42 10 52 20 39 22 M49 20C0 17 0 48 49 41"/></svg></button>
+          <button id="onion" class="tool shape-button onion-button" aria-label="Луковая кожа" aria-pressed="false" title="Показать соседние кадры">
+            <svg viewBox="0 0 76 72" aria-hidden="true"><path class="bulb-glass" d="M25 51 C25 44 13 38 13 26 A25 23 0 0 1 63 26 C63 38 51 44 51 51Z"/><path class="bulb-base" d="M25 51 H51 V62 Q51 67 46 67 H30 Q25 67 25 62Z"/><path class="bulb-filament" d="M33 49 V35 L27 28 M43 49 V35 L49 28 M29 59 H47"/></svg>
+          </button>
+          <label class="tool shape-button onion-color previous-color" title="Цвет предыдущего кадра">
+            <svg viewBox="0 0 44 76" aria-hidden="true"><path d="M34 6Q31 3 26 9L6 31Q0 37 6 44L29 67Q37 75 37 62L36 12Q36 7 34 6Z"/></svg>
+            <input id="onion-previous-color" type="color" value="#d36a48" aria-label="Цвет предыдущего кадра" />
+          </label>
+          <label class="tool shape-button onion-color next-color" title="Цвет следующего кадра">
+            <svg viewBox="0 0 44 76" aria-hidden="true"><path d="M10 6Q13 3 18 9L38 31Q44 37 38 44L15 67Q7 75 7 62L8 12Q8 7 10 6Z"/></svg>
+            <input id="onion-next-color" type="color" value="#96b062" aria-label="Цвет следующего кадра" />
+          </label>
+        </aside>
+        <div class="canvas-container">
+          <canvas id="drawing-canvas" width="820" height="700" tabindex="0" aria-label="Холст для рисования, 820 на 700 пикселей">Для рисования необходим браузер с поддержкой Canvas.</canvas>
+          <div id="brush-cursor" class="brush-cursor" hidden aria-hidden="true"></div>
+        </div>
+        <div class="timeline-area">
+          <div class="frame-controls" aria-label="Управление кадрами">
+            <button id="add-frame" class="tool dark-button" aria-label="Добавить кадр" title="Добавить пустой кадр после выбранного"><svg viewBox="0 0 64 56" aria-hidden="true"><path d="M32 12 V44 M16 28 H48"/></svg></button>
+            <button id="delete-frame" class="tool dark-button" aria-label="Очистить кадр" title="Очистить единственный кадр" disabled><svg viewBox="0 0 64 56" aria-hidden="true"><path d="M16 28 H48"/></svg></button>
+          </div>
+          <nav id="timeline" class="timeline" aria-label="Кадры анимации"><div id="frames" class="frames"></div></nav>
+        </div>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+    </main>
+  </body>
+</html>
